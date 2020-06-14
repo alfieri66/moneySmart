@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="login"
+             x:Class="moneySmart.Pagine.paginaLogin">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Grid Padding="25" VerticalOptions="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Image Source="@drawable/moneySmartAndroid.png" VerticalOptions="Center" HorizontalOptions="Center" Grid.ColumnSpan="2"  WidthRequest="128" Margin="0,0,0,15" />
+                <Frame
+                   VerticalOptions="Center"
+                   Grid.Row="1"
+                   Grid.ColumnSpan="2" 
+                   Padding = "5"
+                   CornerRadius ="10"
+                   IsClippedToBounds="true">
+                   <Entry x:Name="txtUserName"  Placeholder="User name" Margin="0,0,0,5" FontSize="Default" />
+
+                </Frame>
+                <Frame 
+                   VerticalOptions="Center" 
+                   Grid.Row="2"
+                   Grid.ColumnSpan="2"
+                   Padding = "5"
+                   CornerRadius ="10"
+                   IsClippedToBounds="true">
+                    <Entry x:Name="txtPasswd"  Placeholder="Password" IsPassword="True" Margin="0,0,0,5" FontSize="Default"  />
+                </Frame>
+                <Button   Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" x:Name="btnLogin" Clicked="btnLogin_Click" Text="Login" CornerRadius="20" BackgroundColor="#0b8480" HorizontalOptions="Center" TextColor="#FFFFFF" FontAttributes="Bold" FontSize="Default"  />
+                <CheckBox Grid.Row="4" Grid.Column="0" x:Name="chkSalva" Color="#008480" IsChecked="False" HorizontalOptions="Start" VerticalOptions="Center" />
+                <Label    Grid.Row="4" Grid.Column="1" Text="memorizza le credenziali" VerticalOptions="Center" HorizontalOptions="Start" MinimumHeightRequest="128" MinimumWidthRequest="128" />
+                <Label    Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" x:Name="lblRisultato" Text="vers. 20.06.02" VerticalOptions="Center" HorizontalOptions="Start" MinimumHeightRequest="128" MinimumWidthRequest="128" />
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="moneySmart.Pagine.paginaVisualizza">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Grid Padding="5" HorizontalOptions="StartAndExpand">
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width="6*" />
+                    <ColumnDefinition Width="4*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Button     x:Name="btnVistaOperazioni" Grid.Column="0" Clicked="btnVistaOperazioni_Click" Text="Visualizza" CornerRadius="20" BackgroundColor="#dc3545" TextColor="#FFFFFF" />
+                <DatePicker x:Name="dataIniziale" Grid.Column="1" MinimumDate="01/01/2020" HorizontalOptions="FillAndExpand"  FontSize="Default" />
+            </Grid>
+
+            <Grid Padding="5" HorizontalOptions="StartAndExpand">
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width="5*" />
+                    <ColumnDefinition Width="5*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Text="acconto:" Grid.Column="0" Grid.Row="0" FontSize="Default" FontAttributes="Bold" />
+                <Label Text="0" Grid.Column="1" Grid.Row="0" x:Name="lblAcconto" FontSize="Default" TextColor="#dc3545" />
+                <Label Text="recupero da Riportare:" Grid.Column="0" Grid.Row="1" FontSize="Default" FontAttributes="Bold" />
+                <Label Text="0" Grid.Column="1" Grid.Row="1" x:Name="lblRecupero" FontSize="Default" TextColor="#dc3545" />
+                <Label Text="da Riportare:" Grid.Column="0" Grid.Row="2" FontSize="Default" FontAttributes="Bold" />
+                <Label Text="0" Grid.Column="1" Grid.Row="2" x:Name="lbldaRiportare" FontSize="Default" TextColor="#dc3545" />
+                <BoxView  Grid.Column="0"  Grid.Row="3" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" HeightRequest="2"/>
+            </Grid>
+
+            <ListView x:Name="vistaOperazioni" SeparatorVisibility="Default" HasUnevenRows="True" VerticalOptions="StartAndExpand">
+                <ListView.ItemTemplate >
+                    <DataTemplate >
+                        <ViewCell Height="150">
+                            <Grid Padding="5"  >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding valInfo}"
+                                       FontSize="Default"  
+                                       TextColor="#020000" 
+                                       TextType="Html" 
+                                       Grid.Column="0"
+                                       VerticalOptions="Start" 
+                                       HorizontalOptions="Start"  />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button x:Name="btnPdfAndEmail"  Grid.Column="0" Clicked="btnPdfAndEmail_Click" Text="PDF" CornerRadius="20" BackgroundColor="#0b8480" HorizontalOptions="Center" TextColor="#FFFFFF" FontAttributes="Bold" FontSize="Default" IsVisible="False" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

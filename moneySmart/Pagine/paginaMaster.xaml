@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="menù"
+             BackgroundColor="#FFFFFF"
+             x:Class="moneySmart.Pagine.paginaMaster">
+    <ContentPage.Content>
+        <StackLayout>
+          
+          <ListView ItemsSource="{Binding vociMenu}"
+          HasUnevenRows="true"
+          ItemSelected="OnItemSelected"
+          ItemTapped="OnItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0"
+                                   Source="{Binding Icona}"
+                                   Aspect="AspectFill"
+                                   HeightRequest="25"
+                                   WidthRequest="25" />
+                                <Label Grid.Column="1"
+                                       
+                                   Text="{Binding Testo}"
+                                   FontAttributes="Bold" FontSize="Default" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Text="Esci" x:Name="btnLogout" Clicked="btnLogout_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

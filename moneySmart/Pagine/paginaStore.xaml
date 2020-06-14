@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Store"
+             x:Class="moneySmart.Pagine.paginaStore" Padding="0">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Button x:Name="btnMostraInTabella" Clicked="btnMostraInTabella_Click"  Text="operazioni in sospeso" CornerRadius="10" />
+            <ListView x:Name="listaOPerazioni" SeparatorVisibility="Default" HasUnevenRows="True" VerticalOptions="StartAndExpand">
+                <ListView.ItemTemplate >
+
+                    <DataTemplate >
+                        <ViewCell Height="150">
+                                <Grid Padding="5"  >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="7*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                
+                                <Label Text="{Binding valInfo}"
+                                       FontSize="Default"  
+                                       TextColor="#020000" 
+                                       TextType="Html" 
+                                       Grid.Column="0"
+                                       VerticalOptions="Start" 
+                                       HorizontalOptions="Start"  />
+                                <CheckBox Grid.Column="1" CheckedChanged="chkEliminaOp_Changed"  Color="#008480" IsChecked="True"  HorizontalOptions="Start" VerticalOptions="Start" />
+                                
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+                
+            </ListView>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="4*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Button x:Name="btnCancellaDati" Grid.Column="0" Clicked="btnCancellaDati_Click"  Text="Elimina" CornerRadius="25" BackgroundColor="#dc3545" TextColor="#FFFFFF"  />
+                <Label Text="" Grid.Column="1" />
+                <Button x:Name="btnRegistraDati" Grid.Column="2" Clicked="btnRegistraDati_Click"  Text="Registra" CornerRadius="25" BackgroundColor="#28a745" TextColor="#FFFFFF" />
+            </Grid>
+            <Label Text="-" x:Name="lblRisultato"  IsVisible="False"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+    
+ 
