@@ -91,27 +91,27 @@ namespace moneySmart.Pagine
                           "<br>";
                     if (acconto == 0)
                     {
-                        tmp += "acconto: € " + "<br>";
+                        tmp += "acconto: € <br>";
                     }
                     else
                     {
                         tmp += "acconto: € " + acconto + "<br>"; ;
                     }
-                    if (daRiportare == 0)
-                    {
-                        tmp += "da riportare: € " + "<br>";
-                    }
-                    else
-                    {
-                        tmp += "da riportare: € " + daRiportare + "<br>";
-                    }
                     if (recupero == 0)
                     {
-                        tmp += "recupero: € ";
+                        tmp += "recupero da riportare: € <br>";
                     }
                     else
                     {
-                        tmp += "recupero: € " + recupero;
+                        tmp += "recupero da riportare: € " + recupero + "<br>";
+                    }
+                    if (daRiportare == 0)
+                    {
+                        tmp += "da riportare: € ";
+                    }
+                    else
+                    {
+                        tmp += "da riportare: € " + daRiportare;
                     }
                     return tmp.Trim();
                 }

@@ -7,17 +7,17 @@
              Title="cassa"
              x:Class="moneySmart.Pagine.paginaCassa">
     <ContentPage.Content>
-        <StackLayout HorizontalOptions="Center" VerticalOptions="StartAndExpand">
-                <Grid  Padding="25">
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+                <Grid  Padding="25" VerticalOptions="Start" >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="2*" />
                         <ColumnDefinition Width="8*" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
                     
-                    <Entry x:Name="txtCodLocale"    Grid.Row="0" Grid.Column="1" Keyboard="Numeric"  Placeholder="Codice locale" Margin="0,0,0,5"  FontSize="Default"  HorizontalOptions="Fill" HorizontalTextAlignment="Center" />
+                    <Entry x:Name="txtCodLocale"    Grid.Row="0" Grid.Column="1" Keyboard="Numeric"  Placeholder="Codice locale" Margin="0,0,0,5"  FontSize="Default"  HorizontalOptions="Fill" HorizontalTextAlignment="Start" />
                     <Entry x:Name="txtAcconto"      Grid.Row="1" Grid.Column="1" Keyboard="Numeric"  Placeholder="Acconto"  Margin="0,0,0,5" FontSize="Default" />
                     <Entry x:Name="txtRecupero"  Grid.Row="2" Grid.Column="1" Keyboard="Numeric"  Placeholder="recupero da Riportare"  Margin="0,0,0,5" MaxLength="6" FontSize="Default"/>
                     <Entry x:Name="txtDaRiportare"     Grid.Row="3" Grid.Column="1" Keyboard="Numeric"  Placeholder="da Riportare"  Margin="0,0,0,5" MaxLength="6" FontSize="Default"/>
@@ -27,7 +27,7 @@
                     <Label Grid.Row="2" Grid.Column="0" Text="€ " VerticalOptions="Center" HorizontalOptions="Start" FontSize="Default"/>
                     <Label Grid.Row="3" Grid.Column="0" Text="€ " VerticalOptions="Center" HorizontalOptions="Start" FontSize="Default"/>
 
-                    <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" x:Name="btnInviaCassa" Clicked="btnInviaCassa_Click" Text="Invia" CornerRadius="20" BackgroundColor="#0b8480"  HorizontalOptions="Center" TextColor="#FFFFFF" FontAttributes="Bold" />
+                    <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" x:Name="btnInviaCassa" Clicked="btnInviaCassa_Click" Text="Invia" CornerRadius="5" BackgroundColor="#0b8480"  HorizontalOptions="Center" TextColor="#FFFFFF" FontAttributes="Bold" Margin="0,5,0,0" />
                     <Image  Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Source="cassa128.png" HorizontalOptions="Center" />
 
                     <Label x:Name="lblEsitoInvioCassa" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Text="-" VerticalOptions="Center" HorizontalOptions="Start" IsVisible="False" />

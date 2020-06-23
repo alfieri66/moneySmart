@@ -37,7 +37,7 @@ namespace moneySmart.Pagine
             vociMenu.Add(new voceMenu
             {
                 Testo = "Sospesi",
-                Icona = "Sospesi128.png",
+                Icona = "sospesi128.png",
                 Comando = "paginaStore"
             });
 
@@ -65,7 +65,7 @@ namespace moneySmart.Pagine
             vociMenu.Add(new voceMenu
             {
                 Testo = "Strumenti",
-                Icona = "Tools128.png",
+                Icona = "tools128.png",
                 Comando = "paginaStrumenti"
             });
 
