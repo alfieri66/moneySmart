@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -29,12 +25,12 @@ namespace moneySmart.Pagine
         public paginaMaster()
         {
             InitializeComponent();
-           
+
             vociMenu = new List<voceMenu>();
             vociMenu.Add(new voceMenu
             {
                 Testo = "Cassa",
-                Icona = "cassa128.gif",
+                Icona = "cassa128.png",
                 Comando = "paginaCassa"
             });
 
@@ -62,7 +58,7 @@ namespace moneySmart.Pagine
             vociMenu.Add(new voceMenu
             {
                 Testo = "Fondo cassa giornaliero",
-                Icona = "wallet128.gif",
+                Icona = "wallet128.png",
                 Comando = "paginaPortamonete"
             });
 
@@ -104,7 +100,6 @@ namespace moneySmart.Pagine
                 case "paginaStrumenti":
                     masterDetail.Detail = new NavigationPage(new Pagine.paginaStrumenti());
                     masterDetail.IsPresented = false;
-                    
                     break;
             }
         }

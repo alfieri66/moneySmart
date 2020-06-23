@@ -28,7 +28,7 @@
                     <Label Grid.Row="3" Grid.Column="0" Text="€ " VerticalOptions="Center" HorizontalOptions="Start" FontSize="Default"/>
 
                     <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" x:Name="btnInviaCassa" Clicked="btnInviaCassa_Click" Text="Invia" CornerRadius="20" BackgroundColor="#0b8480"  HorizontalOptions="Center" TextColor="#FFFFFF" FontAttributes="Bold" />
-                    <Image  Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Source="@drawable/cassa128.gif" HorizontalOptions="Center" />
+                    <Image  Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Source="cassa128.png" HorizontalOptions="Center" />
 
                     <Label x:Name="lblEsitoInvioCassa" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Text="-" VerticalOptions="Center" HorizontalOptions="Start" IsVisible="False" />
 

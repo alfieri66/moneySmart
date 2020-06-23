@@ -16,7 +16,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <Image Source="@drawable/moneySmartAndroid.png" VerticalOptions="Center" HorizontalOptions="Center" Grid.ColumnSpan="2"  WidthRequest="128" Margin="0,0,0,15" />
+                <Image Source="moneySmartLogo.png" VerticalOptions="Center" HorizontalOptions="Center" Grid.ColumnSpan="2"  WidthRequest="128" Margin="0,0,0,15" />
                 <Frame
                    VerticalOptions="Center"
                    Grid.Row="1"

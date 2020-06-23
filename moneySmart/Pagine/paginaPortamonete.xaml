@@ -23,7 +23,7 @@
                 <Label Grid.Row="1" Grid.Column="0" Text="€ " VerticalOptions="Start" HorizontalOptions="Start" FontSize="Default"/>
 
                 <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Center" Clicked="btnSalvaPortaMonete_Click" Text="Salva" CornerRadius="20" BackgroundColor="#0b8480"  TextColor="#FFFFFF" FontAttributes="Bold" VerticalOptions="Start" />
-                <Image  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Source="@drawable/wallet128.gif" HorizontalOptions="Center" VerticalOptions="Start" />
+                <Image  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Source="wallet128.png" HorizontalOptions="Center" VerticalOptions="Start" />
                 <Label x:Name="lblEsitoPortamonete" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Text="" VerticalOptions="Center" HorizontalOptions="Center" IsVisible="True" />
 
             </Grid>
