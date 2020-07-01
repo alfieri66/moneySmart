@@ -22,7 +22,7 @@
                    Grid.Row="1"
                    Grid.ColumnSpan="2" 
                    Padding = "5"
-                   CornerRadius ="10"
+                   CornerRadius ="5"
                    IsClippedToBounds="true">
                    <Entry x:Name="txtUserName"  Placeholder="User name" Margin="0,0,0,5" FontSize="Default" />
 
@@ -32,11 +32,11 @@
                    Grid.Row="2"
                    Grid.ColumnSpan="2"
                    Padding = "5"
-                   CornerRadius ="10"
+                   CornerRadius ="5"
                    IsClippedToBounds="true">
                     <Entry x:Name="txtPasswd"  Placeholder="Password" IsPassword="True" Margin="0,0,0,5" FontSize="Default"  />
                 </Frame>
-                <Button   Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" x:Name="btnLogin" Clicked="btnLogin_Click" Text="Login" CornerRadius="5" BackgroundColor="#0b8480" HorizontalOptions="Center" TextColor="#FFFFFF" FontAttributes="Bold" FontSize="Default" Margin="0,5,0,0" />
+                <Button   Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" x:Name="btnLogin" Clicked="btnLogin_Click" Text="  Login  " CornerRadius="5" BackgroundColor="#0b8480" HorizontalOptions="Center" TextColor="#FFFFFF" FontAttributes="Bold" FontSize="Default" Margin="0,5,0,0" />
                 <CheckBox Grid.Row="4" Grid.Column="0" x:Name="chkSalva" Color="#008480" IsChecked="False" HorizontalOptions="Start" VerticalOptions="Center" />
                 <Label    Grid.Row="4" Grid.Column="1" Text="memorizza le credenziali" VerticalOptions="Center" HorizontalOptions="Start" MinimumHeightRequest="128" MinimumWidthRequest="128" />
                 <Label    Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" x:Name="lblRisultato" Text="vers. xx.06.02" VerticalOptions="Center" HorizontalOptions="Start" MinimumHeightRequest="128" MinimumWidthRequest="128" />

@@ -8,8 +8,8 @@
     <ContentPage.Content>
         <StackLayout Padding="10">
 
-            <Button x:Name="btnCreaDatabase"  Clicked="btnCreaDatabase_Click" Text="Cancella l'archivio" CornerRadius="10" BackgroundColor="#e9b006" TextColor="#FFFFFF" />
-            <Button x:Name="btnCreaValoriDiProva" Clicked="btnCreaValoriDiProva_Click"  Text="Crea valori di prova" CornerRadius="10" BackgroundColor="#0b8480" TextColor="#FFFFFF" />
+            <Button x:Name="btnCreaDatabase"  Clicked="btnCreaDatabase_Click" Text=" Cancella l'archivio " CornerRadius="5" BackgroundColor="#e9b006" TextColor="#FFFFFF" />
+            <Button x:Name="btnCreaValoriDiProva" Clicked="btnCreaValoriDiProva_Click"  Text=" Crea valori di prova " CornerRadius="5" BackgroundColor="#0b8480" TextColor="#FFFFFF" />
 
         </StackLayout>
     </ContentPage.Content>

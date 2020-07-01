@@ -15,14 +15,14 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
-                <Button     x:Name="btnVistaOperazioni" Grid.Column="0" Clicked="btnVistaOperazioni_Click" Text="Visualizza" CornerRadius="20" BackgroundColor="#dc3545" TextColor="#FFFFFF" />
+                <Button     x:Name="btnVistaOperazioni" Grid.Column="0" Clicked="btnVistaOperazioni_Click" Text="  Visualizza  " CornerRadius="5" BackgroundColor="#dc3545" TextColor="#FFFFFF" />
                 <DatePicker x:Name="dataIniziale" Grid.Column="1" MinimumDate="01/01/2020" HorizontalOptions="FillAndExpand"  FontSize="Default" />
             </Grid>
 
             <Grid Padding="5" HorizontalOptions="StartAndExpand">
                 <Grid.ColumnDefinitions >
-                    <ColumnDefinition Width="5*" />
-                    <ColumnDefinition Width="5*" />
+                    <ColumnDefinition Width="6*" />
+                    <ColumnDefinition Width="4*" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -61,7 +61,7 @@
 
                 </ListView.ItemTemplate>
             </ListView>
-            <Button x:Name="btnPdfAndEmail"  Grid.Column="0" Clicked="btnPdfAndEmail_Click" Text="PDF" CornerRadius="20" BackgroundColor="#0b8480" HorizontalOptions="Center" TextColor="#FFFFFF" FontAttributes="Bold" FontSize="Default" IsVisible="False" />
+            <Button x:Name="btnPdfAndEmail"  Grid.Column="0" Clicked="btnPdfAndEmail_Click" Text="  PDF  " CornerRadius="5" BackgroundColor="#0b8480" HorizontalOptions="Center" TextColor="#FFFFFF" FontAttributes="Bold" FontSize="Default" IsVisible="False" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

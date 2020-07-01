@@ -8,7 +8,7 @@
              x:Class="moneySmart.Pagine.paginaStore" Padding="0">
     <ContentPage.Content>
         <StackLayout Padding="10">
-            <Button x:Name="btnMostraInTabella" Clicked="btnMostraInTabella_Click"  Text="operazioni in sospeso" CornerRadius="10" />
+            <Button x:Name="btnMostraInTabella" Clicked="btnMostraInTabella_Click"  Text=" operazioni in sospeso " CornerRadius="5" />
             <ListView x:Name="listaOPerazioni" SeparatorVisibility="Default" HasUnevenRows="True" VerticalOptions="StartAndExpand">
                 <ListView.ItemTemplate >
 
@@ -45,9 +45,9 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <Button x:Name="btnCancellaDati" Grid.Column="0" Clicked="btnCancellaDati_Click"  Text="Elimina" CornerRadius="25" BackgroundColor="#dc3545" TextColor="#FFFFFF"  />
+                <Button x:Name="btnCancellaDati" Grid.Column="0" Clicked="btnCancellaDati_Click"  Text=" Elimina " CornerRadius="5" BackgroundColor="#dc3545" TextColor="#FFFFFF"  />
                 <Label Text="" Grid.Column="1" />
-                <Button x:Name="btnRegistraDati" Grid.Column="2" Clicked="btnRegistraDati_Click"  Text="Registra" CornerRadius="25" BackgroundColor="#28a745" TextColor="#FFFFFF" />
+                <Button x:Name="btnRegistraDati" Grid.Column="2" Clicked="btnRegistraDati_Click"  Text=" Registra " CornerRadius="5" BackgroundColor="#28a745" TextColor="#FFFFFF" />
             </Grid>
             <Label Text="-" x:Name="lblRisultato"  IsVisible="False"/>
         </StackLayout>

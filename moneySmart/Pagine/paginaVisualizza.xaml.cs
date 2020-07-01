@@ -64,6 +64,7 @@ namespace moneySmart.Pagine
             public string dataFin;
             public Single monete;
             public Single carta;
+            public string targa;
         }
 
         struct tinfoVista
@@ -91,27 +92,27 @@ namespace moneySmart.Pagine
                           "<br>";
                     if (acconto == 0)
                     {
-                        tmp += "acconto: € <br>";
+                        tmp += "acconto: &euro; <br>";
                     }
                     else
                     {
-                        tmp += "acconto: € " + acconto + "<br>"; ;
+                        tmp += "acconto: &euro; " + acconto + "<br>"; ;
                     }
                     if (recupero == 0)
                     {
-                        tmp += "recupero da riportare: € <br>";
+                        tmp += "recupero da riportare: &euro; <br>";
                     }
                     else
                     {
-                        tmp += "recupero da riportare: € " + recupero + "<br>";
+                        tmp += "recupero da riportare: &euro; " + recupero + "<br>";
                     }
                     if (daRiportare == 0)
                     {
-                        tmp += "da riportare: € ";
+                        tmp += "da riportare: &euro; ";
                     }
                     else
                     {
-                        tmp += "da riportare: € " + daRiportare;
+                        tmp += "da riportare: &euro; " + daRiportare;
                     }
                     return tmp.Trim();
                 }
@@ -240,17 +241,19 @@ namespace moneySmart.Pagine
             string strMsgSend;
             tParametriOpPlus datiOp = new tParametriOpPlus();
             tEsitoLetturaD esitoLetturaD = new tEsitoLetturaD();
-            string strMonete, strCarta, dataPortaMonete;
-            string strMoneteIeri, strCartaIeri, dataPortaMoneteIeri;
+            string strMonete, strCarta, strTarga, dataPortaMonete;
+            string strMoneteIeri, strCartaIeri, strTargaIeri, dataPortaMoneteIeri;
             string strDataOdierna;
 
             dataPortaMoneteIeri = Preferences.Get("dataPortaMoneteIeri", "");
             strMoneteIeri = Preferences.Get("MoneteIeri", "0");
             strCartaIeri = Preferences.Get("CartaIeri", "0");
+            strTargaIeri = Preferences.Get("TargaIeri", "");
 
             dataPortaMonete = Preferences.Get("dataPortaMonete", "");
             strMonete = Preferences.Get("Monete", "0");
             strCarta = Preferences.Get("Carta", "0");
+            strTarga = Preferences.Get("Targa", "");
             strDataOdierna = DateTime.Now.ToString("dd-MM-yyyy");
 
             if (DateTime.Now.ToString("yyyy-MM-dd") != dataIni)
@@ -259,11 +262,13 @@ namespace moneySmart.Pagine
                 {
                     strMonete = strMoneteIeri;
                     strCarta = strCartaIeri;
+                    strTarga = strTargaIeri;
                 }
                 else
                 {
                     strMonete = "0";
                     strCarta = "0";
+                    strTarga = "";
                 }
             }
 
@@ -272,6 +277,7 @@ namespace moneySmart.Pagine
             datiOp.dataFin = dataIni; 
             datiOp.monete = Single.Parse(strMonete);
             datiOp.carta = Single.Parse(strCarta);
+            datiOp.targa = strTarga;
 
             esito.messaggio = "";
             esito.esito = false;
@@ -281,7 +287,7 @@ namespace moneySmart.Pagine
             var request = new HttpRequestMessage
             {
                 Method = HttpMethod.Post,
-                RequestUri = new Uri(costanti.uri + "pdfCassaUtente"),
+                RequestUri = new Uri(costanti.uri + "pdfCassaUtentePlus"),
                 Content = new StringContent(strMsgSend, Encoding.UTF8, "application/json"),
             };
 

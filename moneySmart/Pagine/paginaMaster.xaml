@@ -39,7 +39,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Button Text="Esci" x:Name="btnLogout" Clicked="btnLogout_Clicked"/>
+            <Button Text=" Esci " x:Name="btnLogout" Clicked="btnLogout_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

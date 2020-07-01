@@ -16,15 +16,17 @@
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
 
-                <Entry x:Name="txtMonete"  Grid.Row="0" Grid.Column="1" Keyboard="Numeric"  Placeholder="monete" Margin="0,0,0,5"  FontSize="Default"  HorizontalOptions="Fill" HorizontalTextAlignment="Center" VerticalOptions="Start" />
-                <Entry x:Name="txtCarta"   Grid.Row="1" Grid.Column="1" Keyboard="Numeric"  Placeholder="carta"  Margin="0,0,0,5" FontSize="Default" VerticalOptions="Start" />
+                <Entry x:Name="txtMonete"  Grid.Row="0" Grid.Column="1" Keyboard="Numeric"  Placeholder="monete" Margin="0,0,0,5" FontSize="Default"  HorizontalOptions="Fill" HorizontalTextAlignment="Start" VerticalOptions="Start" />
+                <Entry x:Name="txtCarta"   Grid.Row="1" Grid.Column="1" Keyboard="Numeric"  Placeholder="carta"  Margin="0,0,0,5" FontSize="Default"  HorizontalOptions="Fill" HorizontalTextAlignment="Start" VerticalOptions="Start" />
+                <Entry x:Name="txtTarga"   Grid.Row="2" Grid.Column="1" Keyboard="Default"  Placeholder="targa"  Margin="0,0,0,5" FontSize="Default"  HorizontalOptions="Fill" HorizontalTextAlignment="Start" VerticalOptions="Start" />
 
                 <Label Grid.Row="0" Grid.Column="0" Text="€ " VerticalOptions="Start" HorizontalOptions="Start" FontSize="Default" VerticalTextAlignment="Start"/>
                 <Label Grid.Row="1" Grid.Column="0" Text="€ " VerticalOptions="Start" HorizontalOptions="Start" FontSize="Default"/>
+                <Label Grid.Row="2" Grid.Column="0" Text="# " VerticalOptions="Start" HorizontalOptions="Start" FontSize="Default"/>
 
-                <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Center" Clicked="btnSalvaPortaMonete_Click" Text="Salva" CornerRadius="20" BackgroundColor="#0b8480"  TextColor="#FFFFFF" FontAttributes="Bold" VerticalOptions="Start" />
-                <Image  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Source="wallet128.png" HorizontalOptions="Center" VerticalOptions="Start" />
-                <Label x:Name="lblEsitoPortamonete" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Text="" VerticalOptions="Center" HorizontalOptions="Center" IsVisible="True" />
+                <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Center" Clicked="btnSalvaPortaMonete_Click" Text=" Salva " CornerRadius="5" BackgroundColor="#0b8480"  TextColor="#FFFFFF" FontAttributes="Bold" VerticalOptions="Start" />
+                <Image  Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Source="wallet128.png" HorizontalOptions="Center" VerticalOptions="Start" />
+                <Label x:Name="lblEsitoPortamonete" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Text="" VerticalOptions="Center" HorizontalOptions="Center" IsVisible="True" />
 
             </Grid>
         </StackLayout>
