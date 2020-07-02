@@ -28,8 +28,7 @@
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
     <CodesignKey>Apple Development: Salvatore Alfieri (MN6WQ92BJ8)</CodesignKey>
-    <CodesignProvision>
-    </CodesignProvision>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
     <IOSDebugOverWiFi>true</IOSDebugOverWiFi>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
