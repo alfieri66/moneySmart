@@ -39,7 +39,7 @@
                 <Button   Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" x:Name="btnLogin" Clicked="btnLogin_Click" Text="  Login  " CornerRadius="5" BackgroundColor="#0b8480" HorizontalOptions="Center" TextColor="#FFFFFF" FontAttributes="Bold" FontSize="Default" Margin="0,5,0,0" />
                 <CheckBox Grid.Row="4" Grid.Column="0" x:Name="chkSalva" Color="#008480" IsChecked="False" HorizontalOptions="Start" VerticalOptions="Center" />
                 <Label    Grid.Row="4" Grid.Column="1" Text="memorizza le credenziali" VerticalOptions="Center" HorizontalOptions="Start" MinimumHeightRequest="128" MinimumWidthRequest="128" />
-                <Label    Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" x:Name="lblRisultato" Text="vers. xx.06.02" VerticalOptions="Center" HorizontalOptions="Start" MinimumHeightRequest="128" MinimumWidthRequest="128" />
+                <Label    Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" x:Name="lblRisultato" Text="vers. 20.07.03" VerticalOptions="Center" HorizontalOptions="Start" MinimumHeightRequest="128" MinimumWidthRequest="128" />
             </Grid>
         </StackLayout>
     </ContentPage.Content>

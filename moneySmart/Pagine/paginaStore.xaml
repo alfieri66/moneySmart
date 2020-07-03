@@ -4,7 +4,6 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             Title="Store"
              x:Class="moneySmart.Pagine.paginaStore" Padding="0">
     <ContentPage.Content>
         <StackLayout Padding="10">

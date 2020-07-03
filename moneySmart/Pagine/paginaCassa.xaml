@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             Title="cassa"
+             Title="Cassa"
              x:Class="moneySmart.Pagine.paginaCassa">
     <ContentPage.Content>
         <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
@@ -27,12 +27,11 @@
                     <Label Grid.Row="2" Grid.Column="0" Text="€ " VerticalOptions="Center" HorizontalOptions="Start" FontSize="Default"/>
                     <Label Grid.Row="3" Grid.Column="0" Text="€ " VerticalOptions="Center" HorizontalOptions="Start" FontSize="Default"/>
 
-                    <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" x:Name="btnInviaCassa" Clicked="btnInviaCassa_Click" Text=" Invia " CornerRadius="5" BackgroundColor="#0b8480"  HorizontalOptions="Center" TextColor="#FFFFFF" FontAttributes="Bold" Margin="0,5,0,0" />
+                    <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" x:Name="btnInviaCassa" Clicked="btnInviaCassa_Click" Text="  Invia  " CornerRadius="5" BackgroundColor="#0b8480"  HorizontalOptions="Center" TextColor="#FFFFFF" FontAttributes="Bold" Margin="0,5,0,0" />
                     <Image  Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Source="cassa128.png" HorizontalOptions="Center" />
-
                     <Label x:Name="lblEsitoInvioCassa" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Text="-" VerticalOptions="Center" HorizontalOptions="Start" IsVisible="False" />
-
-                </Grid>
+                 
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
