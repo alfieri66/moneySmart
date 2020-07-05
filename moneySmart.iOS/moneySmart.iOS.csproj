@@ -14,7 +14,7 @@
     <AssemblyName>moneySmart.iOS</AssemblyName>
     <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
-    <ProvisioningType>manual</ProvisioningType>
+    <ProvisioningType>automatic</ProvisioningType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -65,13 +65,13 @@
     <MtouchArch>ARM64</MtouchArch>
     <CodesignKey>Apple Development: Salvatore Alfieri (MN6WQ92BJ8)</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <CodesignProvision>
-    </CodesignProvision>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
     <OptimizePNGs>true</OptimizePNGs>
     <MtouchDebug>false</MtouchDebug>
     <MtouchProfiling>false</MtouchProfiling>
     <BuildIpa>true</BuildIpa>
-    <IpaMetadata>Info.plist</IpaMetadata>
+    <IpaMetadata>
+    </IpaMetadata>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
     <AppExtensionDebugBundleId />

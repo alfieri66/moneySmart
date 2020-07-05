@@ -33,7 +33,7 @@
 	<key>CFBundleName</key>
 	<string>moneySmart</string>
 	<key>CFBundleShortVersionString</key>
-	<string>200703</string>
+	<string>200705</string>
 	<key>XSAppIconAssets</key>
 	<string>Media.xcassets/AppIcons.appiconset</string>
 </dict>
