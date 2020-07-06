@@ -25,7 +25,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>moneySmart</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.alfieri.moneysmart</string>
+	<string>com.sisco.moneysmart</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>UILaunchStoryboardName</key>
@@ -33,7 +33,7 @@
 	<key>CFBundleName</key>
 	<string>moneySmart</string>
 	<key>CFBundleShortVersionString</key>
-	<string>200705</string>
+	<string>200706</string>
 	<key>XSAppIconAssets</key>
 	<string>Media.xcassets/AppIcons.appiconset</string>
 </dict>
