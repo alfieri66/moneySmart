@@ -61,7 +61,7 @@
 
                 </ListView.ItemTemplate>
             </ListView>
-            <Button x:Name="btnPdfAndEmail"  Grid.Column="0" Clicked="btnPdfAndEmail_Click" Text="  PDF  " CornerRadius="5" BackgroundColor="#0b8480" HorizontalOptions="Center" TextColor="#FFFFFF" FontAttributes="Bold" FontSize="Default" IsVisible="False" />
+            <Button x:Name="btnPdfPrintAndEmail"  Grid.Column="0" Clicked="btnPdfPrintAndEmail_Click" Text="  PDF  " CornerRadius="5" BackgroundColor="#0b8480" HorizontalOptions="Center" TextColor="#FFFFFF" FontAttributes="Bold" FontSize="Default" IsVisible="False" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

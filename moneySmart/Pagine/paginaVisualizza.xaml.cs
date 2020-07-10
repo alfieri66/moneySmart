@@ -203,12 +203,13 @@ namespace moneySmart.Pagine
                     lbldaRiportare.Text = String.Format("{0:0,0.00}", totDaRiportare);
                     lblRecupero.Text = String.Format("{0:0,0.00}", totRecupero);
                     if (n>0)
-                    { 
-                        btnPdfAndEmail.IsVisible = true; 
+                    {
+                        btnPdfPrintAndEmail.IsVisible = true;
+                        btnPdfPrintAndEmail.Text = "  PDF  ";
                     }
                     else
                     {
-                        btnPdfAndEmail.IsVisible = false;
+                        btnPdfPrintAndEmail.IsVisible = false;
                     }
                 }
             }
@@ -216,8 +217,7 @@ namespace moneySmart.Pagine
             {
             }
         }
-
-        private void btnPdfAndEmail_Click(object sender, EventArgs e)
+        private async void btnPdfPrintAndEmail_Click(object sender, EventArgs e)
         {
             DateTime dataTmp;
             string dataIni;
@@ -227,12 +227,25 @@ namespace moneySmart.Pagine
             if (App.ConnessioneOk && App.loginOk)
             {
                 tmpUser = Preferences.Get("mbUser", "");
-                dataTmp = dataIniziale.Date;
-                dataIni = dataTmp.ToString("yyyy-MM-dd");
-                dataFin = dataTmp.ToString("yyyy-MM-dd");
-
-                inviaPdf(tmpUser, dataIni, dataFin);
-                DisplayAlert("Informazione!", "file PDF inviato via e-mail", "OK");
+                if (btnPdfPrintAndEmail.Text.ToUpper().Contains("PDF"))
+                {
+                    dataTmp = dataIniziale.Date;
+                    dataIni = dataTmp.ToString("yyyy-MM-dd");
+                    dataFin = dataTmp.ToString("yyyy-MM-dd");
+                    inviaPdf(tmpUser, dataIni, dataFin);
+                    await DisplayAlert("Informazione!", "file PDF inviato.", "Ok");
+                    btnPdfPrintAndEmail.Text = "  Stampa  ";
+                }
+                else
+                {
+                    if (btnPdfPrintAndEmail.Text.ToUpper().Contains("STAMPA"))
+                    {
+                        string tmpPath = costanti.uri.Replace("InterrogaDB.asmx/", "public/");
+                        string fileName = ("pdf_" + tmpUser).Replace(" ", "").Replace(".", "_").Replace("@", "_") + ".pdf";
+                        string uriPdf = tmpPath + fileName;
+                        await Browser.OpenAsync(uriPdf, BrowserLaunchMode.SystemPreferred);
+                    }
+                }
             }
         }
 
@@ -244,6 +257,7 @@ namespace moneySmart.Pagine
             string strMonete, strCarta, strTarga, dataPortaMonete;
             string strMoneteIeri, strCartaIeri, strTargaIeri, dataPortaMoneteIeri;
             string strDataOdierna;
+            Single monete, carta;
 
             dataPortaMoneteIeri = Preferences.Get("dataPortaMoneteIeri", "");
             strMoneteIeri = Preferences.Get("MoneteIeri", "0");
@@ -271,6 +285,17 @@ namespace moneySmart.Pagine
                     strTarga = "";
                 }
             }
+
+            if (!Single.TryParse(strMonete, out monete))
+                {
+                strMonete = "0";
+                }
+
+            if (!Single.TryParse(strCarta, out carta))
+                            {
+                strCarta = "0";
+            }
+
 
             datiOp.email = tmpUser;
             datiOp.dataIni = dataIni;
