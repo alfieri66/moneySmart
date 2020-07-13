@@ -157,6 +157,7 @@ namespace moneySmart.Pagine
             catch (Exception ex)
             {
                 messaggio = ex.Message;
+                messaggio = "La connessione non è stabile! ";
             }
             lblRisultato.Text = messaggio;
             if (procedi)
