@@ -27,11 +27,19 @@ namespace moneySmart.Pagine
             InitializeComponent();
 
             vociMenu = new List<voceMenu>();
+
             vociMenu.Add(new voceMenu
             {
                 Testo = "Cassa",
                 Icona = "cassa128.png",
                 Comando = "paginaCassa"
+            });
+
+            vociMenu.Add(new voceMenu
+            {
+                Testo = "Lista movimenti",
+                Icona = "movimenti128.png",
+                Comando = "paginaMovimenti"
             });
 
             vociMenu.Add(new voceMenu
@@ -79,6 +87,10 @@ namespace moneySmart.Pagine
             {
                 case "paginaCassa":
                     masterDetail.Detail = new NavigationPage(new Pagine.paginaCassa());
+                    masterDetail.IsPresented = false;
+                    break;
+                case "paginaMovimenti":
+                    masterDetail.Detail = new NavigationPage(new Pagine.paginaBilancio());
                     masterDetail.IsPresented = false;
                     break;
                 case "paginaStore":

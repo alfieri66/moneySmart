@@ -7,27 +7,38 @@
              x:Class="moneySmart.Pagine.paginaPortamonete" >
     <ContentPage.Content>
         <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
-            <Grid  Padding="25" VerticalOptions="Start">
+            <Grid  Padding="25" VerticalOptions="Fill" >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*" />
                     <ColumnDefinition Width="8*" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
 
-                <Entry x:Name="txtMonete"  Grid.Row="0" Grid.Column="1" Keyboard="Numeric"  Placeholder="monete" Margin="0,0,0,5" FontSize="Default"  HorizontalOptions="Fill" HorizontalTextAlignment="Start" VerticalOptions="Start" />
-                <Entry x:Name="txtCarta"   Grid.Row="1" Grid.Column="1" Keyboard="Numeric"  Placeholder="carta"  Margin="0,0,0,5" FontSize="Default"  HorizontalOptions="Fill" HorizontalTextAlignment="Start" VerticalOptions="Start" />
-                <Entry x:Name="txtTarga"   Grid.Row="2" Grid.Column="1" Keyboard="Default"  Placeholder="targa"  Margin="0,0,0,5" FontSize="Default"  HorizontalOptions="Fill" HorizontalTextAlignment="Start" VerticalOptions="Start" />
+                <Entry x:Name="txtMonete"       Grid.Row="0" Grid.Column="1" Keyboard="Numeric"  Placeholder="monete"       Margin="0,0,0,5" FontSize="Default"  HorizontalOptions="Fill" HorizontalTextAlignment="Start" VerticalOptions="Start" />
+                <Entry x:Name="txtCarta"        Grid.Row="1" Grid.Column="1" Keyboard="Numeric"  Placeholder="carta"        Margin="0,0,0,5" FontSize="Default"  HorizontalOptions="Fill" HorizontalTextAlignment="Start" VerticalOptions="Start" />
+                <Entry x:Name="txtTarga"        Grid.Row="2" Grid.Column="1" Keyboard="Default"  Placeholder="targa"        Margin="0,0,0,5" FontSize="Default"  HorizontalOptions="Fill" HorizontalTextAlignment="Start" VerticalOptions="Start" />
+                <Entry x:Name="txtKm"           Grid.Row="3" Grid.Column="1" Keyboard="Numeric"  Placeholder="chilometri"   Margin="0,0,0,5" FontSize="Default"  HorizontalOptions="Fill" HorizontalTextAlignment="Start" VerticalOptions="Start" />
+                <Entry x:Name="txtRifornimento" Grid.Row="4" Grid.Column="1" Keyboard="Numeric"  Placeholder="rifornimento" Margin="0,0,0,5" FontSize="Default"  HorizontalOptions="Fill" HorizontalTextAlignment="Start" VerticalOptions="Start" />
+                <Editor x:Name="txtNote"        Grid.Row="5" Grid.Column="1" Keyboard="Default"  Placeholder="note"         Margin="0,0,0,5" FontSize="Default"  HorizontalOptions="Fill" VerticalOptions="Fill" MaxLength="250" AutoSize="TextChanges"/>
+                
+                <Label Grid.Row="0" Grid.Column="0" Text="€ "   VerticalOptions="Start" HorizontalOptions="Start" FontSize="Default"/>
+                <Label Grid.Row="1" Grid.Column="0" Text="€ "   VerticalOptions="Start" HorizontalOptions="Start" FontSize="Default"/>
+                <Label Grid.Row="2" Grid.Column="0" Text="# "   VerticalOptions="Start" HorizontalOptions="Start" FontSize="Default"/>
+                <Label Grid.Row="3" Grid.Column="0" Text="Km"   VerticalOptions="Start" HorizontalOptions="Start" FontSize="Default"/>
+                <Label Grid.Row="4" Grid.Column="0" Text="€ "   VerticalOptions="Start" HorizontalOptions="Start" FontSize="Default"/>
+                <Label Grid.Row="5" Grid.Column="0" Text="Nota" VerticalOptions="Start" HorizontalOptions="Start" FontSize="Default"/>
 
-                <Label Grid.Row="0" Grid.Column="0" Text="€ " VerticalOptions="Start" HorizontalOptions="Start" FontSize="Default" VerticalTextAlignment="Start"/>
-                <Label Grid.Row="1" Grid.Column="0" Text="€ " VerticalOptions="Start" HorizontalOptions="Start" FontSize="Default"/>
-                <Label Grid.Row="2" Grid.Column="0" Text="# " VerticalOptions="Start" HorizontalOptions="Start" FontSize="Default"/>
-
-                <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Center" Clicked="btnSalvaPortaMonete_Click" Text=" Salva " CornerRadius="5" BackgroundColor="#0b8480"  TextColor="#FFFFFF" FontAttributes="Bold" VerticalOptions="Start" />
-                <Image  Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Source="wallet128.png" HorizontalOptions="Center" VerticalOptions="Start" />
-                <Label x:Name="lblEsitoPortamonete" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Text="" VerticalOptions="Center" HorizontalOptions="Center" IsVisible="True" />
-
+                <Button Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Center" Clicked="btnSalvaPortaMonete_Click" Text=" Salva e Invia" CornerRadius="5" BackgroundColor="#0b8480"  TextColor="#FFFFFF" FontAttributes="Bold" VerticalOptions="End" />
+                <Label  x:Name="lblEsitoPortamonete" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Text="" VerticalOptions="End" HorizontalOptions="Center" IsVisible="True" />
             </Grid>
         </StackLayout>
     </ContentPage.Content>

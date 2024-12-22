@@ -65,6 +65,10 @@ namespace moneySmart.Pagine
             public Single monete;
             public Single carta;
             public string targa;
+            public int km;
+            public Single rifornimento;
+            public string note;
+
         }
 
         struct tinfoVista
@@ -254,20 +258,28 @@ namespace moneySmart.Pagine
             string strMsgSend;
             tParametriOpPlus datiOp = new tParametriOpPlus();
             tEsitoLetturaD esitoLetturaD = new tEsitoLetturaD();
-            string strMonete, strCarta, strTarga, dataPortaMonete;
-            string strMoneteIeri, strCartaIeri, strTargaIeri, dataPortaMoneteIeri;
+            string strMonete, strCarta, strTarga, strChilometri, strRifornimento, strNote, dataPortaMonete;
+            string strMoneteIeri, strCartaIeri, strTargaIeri, strChilometriIeri, strRifornimentoIeri, strNoteIeri, dataPortaMoneteIeri;
             string strDataOdierna;
-            Single monete, carta;
+            Single monete, carta, rifornimento;
+            int km;
 
             dataPortaMoneteIeri = Preferences.Get("dataPortaMoneteIeri", "");
             strMoneteIeri = Preferences.Get("MoneteIeri", "0");
             strCartaIeri = Preferences.Get("CartaIeri", "0");
             strTargaIeri = Preferences.Get("TargaIeri", "");
+            strChilometriIeri = Preferences.Get("ChilometriIeri", "0");
+            strRifornimentoIeri = Preferences.Get("RifornimentoIeri", "0");
+            strNoteIeri= Preferences.Get("NoteIeri", "");
 
             dataPortaMonete = Preferences.Get("dataPortaMonete", "");
             strMonete = Preferences.Get("Monete", "0");
             strCarta = Preferences.Get("Carta", "0");
             strTarga = Preferences.Get("Targa", "");
+            strChilometri = Preferences.Get("Chilometri", "0");
+            strRifornimento = Preferences.Get("Rifornimento", "0");
+            strNote = Preferences.Get("Note", "");
+
             strDataOdierna = DateTime.Now.ToString("dd-MM-yyyy");
 
             if (DateTime.Now.ToString("yyyy-MM-dd") != dataIni)
@@ -277,12 +289,20 @@ namespace moneySmart.Pagine
                     strMonete = strMoneteIeri;
                     strCarta = strCartaIeri;
                     strTarga = strTargaIeri;
+                    strChilometri = strChilometriIeri;
+                    strRifornimento = strRifornimentoIeri;
+                    strNote = strNoteIeri;
+
                 }
                 else
                 {
                     strMonete = "0";
                     strCarta = "0";
                     strTarga = "";
+                    strChilometri = "0";
+                    strRifornimento = "0";
+                    strNote = "";
+
                 }
             }
 
@@ -296,6 +316,16 @@ namespace moneySmart.Pagine
                 strCarta = "0";
             }
 
+            if (!int.TryParse(strChilometri, out km))
+            {
+                strChilometri = "0";
+            }
+
+            if (!Single.TryParse(strRifornimento, out rifornimento))
+            {
+                strRifornimento = "0";
+            }
+
 
             datiOp.email = tmpUser;
             datiOp.dataIni = dataIni;
@@ -303,6 +333,10 @@ namespace moneySmart.Pagine
             datiOp.monete = Single.Parse(strMonete);
             datiOp.carta = Single.Parse(strCarta);
             datiOp.targa = strTarga;
+            datiOp.km = int.Parse(strChilometri);
+            datiOp.rifornimento = Single.Parse(strRifornimento);
+            datiOp.note = strNote;
+
 
             esito.messaggio = "";
             esito.esito = false;
@@ -312,7 +346,7 @@ namespace moneySmart.Pagine
             var request = new HttpRequestMessage
             {
                 Method = HttpMethod.Post,
-                RequestUri = new Uri(costanti.uri + "pdfCassaUtentePlus"),
+                RequestUri = new Uri(costanti.uri + "pdfCassaUtentePlusTwo"),
                 Content = new StringContent(strMsgSend, Encoding.UTF8, "application/json"),
             };
 
