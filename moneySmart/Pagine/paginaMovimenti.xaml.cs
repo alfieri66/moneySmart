@@ -16,5 +16,11 @@ namespace moneySmart.Pagine
 		{
 			InitializeComponent ();
 		}
-	}
+
+		async private void btnCercaMovimenti_Click(object sender, EventArgs e)
+		{
+            await DisplayAlert("Attenzione!", "Connessione non presente ", "Ok");
+        }
+
+    }
 }

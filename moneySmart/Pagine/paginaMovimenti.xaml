@@ -1,12 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="moneySmart.Pagine.paginaBilancio">
+             x:Class="moneySmart.Pagine.paginaBilancio"
+             Title="Lista movimenti">
+    
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Padding="10">
+            <Grid  VerticalOptions="Start" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="8*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Entry      Grid.Row="1" Grid.Column="1" x:Name="txtLocale" Keyboard="Default"  Placeholder="Locale" Margin="0,0,0,5"  FontSize="Default"  HorizontalOptions="Fill" HorizontalTextAlignment="Start" />
+                <DatePicker Grid.Row="2" Grid.Column="1" x:Name="dallaData" Margin="0,0,0,5" FontSize="Default" HorizontalOptions="Fill" Format="dd/MM/yyyy" />
+                <DatePicker Grid.Row="3" Grid.Column="1" x:Name="allaData"  Margin="0,0,0,5" FontSize="Default" HorizontalOptions="Fill" Format="dd/MM/yyyy"/>
+
+                <Label Grid.Row="1" Grid.Column="0" Text="    " VerticalOptions="Center" HorizontalOptions="Start" FontSize="Default"/>
+                <Label Grid.Row="2" Grid.Column="0" Text="dal " VerticalOptions="Center" HorizontalOptions="Start" FontSize="Default"/>
+                <Label Grid.Row="3" Grid.Column="0" Text="al  " VerticalOptions="Center" HorizontalOptions="Start" FontSize="Default"/>
+
+                <Button Grid.Row="4" Grid.Column="0"  x:Name="btnCercaMovimenti" Grid.ColumnSpan="2" Clicked="btnCercaMovimenti_Click" Text="  Cerca  " CornerRadius="5" BackgroundColor="#0b8480"  HorizontalOptions="Center" TextColor="#FFFFFF" FontAttributes="Bold" Margin="0,5,0,0" />
+                <Image  Grid.Row="5" Grid.Column="0"  Source="movimenti128.png" Grid.ColumnSpan="2" HorizontalOptions="Center" />
+                <Label x:Name="lblEsitoRicerca" Grid.Row="5" Grid.Column="0" Text="-" VerticalOptions="Center" HorizontalOptions="Start" IsVisible="False" />
+
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

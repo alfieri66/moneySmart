@@ -38,7 +38,7 @@ namespace moneySmart.Pagine
             vociMenu.Add(new voceMenu
             {
                 Testo = "Lista movimenti",
-                Icona = "movimenti128.png",
+                Icona = "cassa128.png",
                 Comando = "paginaMovimenti"
             });
 

@@ -19,8 +19,8 @@
                     
                     <Entry x:Name="txtCodLocale"    Grid.Row="0" Grid.Column="1" Keyboard="Numeric"  Placeholder="Codice locale" Margin="0,0,0,5"  FontSize="Default"  HorizontalOptions="Fill" HorizontalTextAlignment="Start" />
                     <Entry x:Name="txtAcconto"      Grid.Row="1" Grid.Column="1" Keyboard="Numeric"  Placeholder="Acconto"  Margin="0,0,0,5" FontSize="Default" />
-                    <Entry x:Name="txtRecupero"  Grid.Row="2" Grid.Column="1" Keyboard="Numeric"  Placeholder="recupero da Riportare"  Margin="0,0,0,5" MaxLength="6" FontSize="Default"/>
-                    <Entry x:Name="txtDaRiportare"     Grid.Row="3" Grid.Column="1" Keyboard="Numeric"  Placeholder="da Riportare"  Margin="0,0,0,5" MaxLength="6" FontSize="Default"/>
+                    <Entry x:Name="txtRecupero"     Grid.Row="2" Grid.Column="1" Keyboard="Numeric"  Placeholder="recupero da Riportare"  Margin="0,0,0,5" MaxLength="6" FontSize="Default"/>
+                    <Entry x:Name="txtDaRiportare"  Grid.Row="3" Grid.Column="1" Keyboard="Numeric"  Placeholder="da Riportare"  Margin="0,0,0,5" MaxLength="6" FontSize="Default"/>
 
                     <Label Grid.Row="0" Grid.Column="0" Text="  " VerticalOptions="Center" HorizontalOptions="Start" FontSize="Default"/>
                     <Label Grid.Row="1" Grid.Column="0" Text="€ " VerticalOptions="Center" HorizontalOptions="Start" FontSize="Default"/>
